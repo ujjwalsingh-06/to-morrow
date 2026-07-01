@@ -1,0 +1,208 @@
+/* Page Load */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-tag,
+.hero-text h1,
+.hero-desc,
+.hero-buttons,
+.hero-stats {
+  animation: fadeUp 0.9s ease both;
+}
+
+.hero-tag {
+  animation-delay: 0.15s;
+}
+
+.hero-text h1 {
+  animation-delay: 0.3s;
+}
+
+.hero-desc {
+  animation-delay: 0.45s;
+}
+
+.hero-buttons {
+  animation-delay: 0.6s;
+}
+
+.hero-stats {
+  animation-delay: 0.75s;
+}
+
+/* Hover Shine */
+.primary-btn,
+.secondary-btn,
+.secondary-dark-btn,
+.call-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-btn::before,
+.secondary-btn::before,
+.secondary-dark-btn::before,
+.call-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transition: 0.6s ease;
+}
+
+.primary-btn:hover::before,
+.secondary-btn:hover::before,
+.secondary-dark-btn:hover::before,
+.call-btn:hover::before {
+  left: 120%;
+}
+
+/* Floating WhatsApp Pulse */
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.floating-whatsapp {
+  animation: whatsappPulse 2.4s infinite;
+}
+
+/* Image Luxury Zoom */
+.category-card img,
+.product-card img,
+.about-image img {
+  will-change: transform;
+}
+
+/* Scroll Reveal Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(45px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-45px);
+  transition: 0.8s ease;
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(45px);
+  transition: 0.8s ease;
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Smooth Card Entrance */
+.category-card,
+.product-card,
+.review-card {
+  animation: cardFade 0.8s ease both;
+}
+
+@keyframes cardFade {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-card:nth-child(1),
+.product-card:nth-child(1),
+.review-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.category-card:nth-child(2),
+.product-card:nth-child(2),
+.review-card:nth-child(2) {
+  animation-delay: 0.22s;
+}
+
+.category-card:nth-child(3),
+.product-card:nth-child(3),
+.review-card:nth-child(3) {
+  animation-delay: 0.34s;
+}
+
+.product-card:nth-child(4) {
+  animation-delay: 0.46s;
+}
+
+/* Premium underline animation */
+.category-card a {
+  position: relative;
+}
+
+.category-card a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: 0.35s ease;
+}
+
+.category-card a:hover::after {
+  width: 100%;
+}
+
+/* Header Drop */
+.site-header {
+  animation: headerDrop 0.7s ease both;
+}
+
+@keyframes headerDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
