@@ -686,3 +686,59 @@ button{
   background:var(--gold);
   border-radius:999px;
 }
+.preloader{
+  position:fixed;
+  inset:0;
+  background:#090909;
+  z-index:99999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:opacity .8s ease, visibility .8s ease;
+}
+
+.preloader.hide{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+.preloader-content{
+  text-align:center;
+  color:#fff;
+}
+
+.preloader-content p{
+  color:#c6a15b;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:15px;
+}
+
+.preloader-content h1{
+  font-family:Georgia,serif;
+  font-size:80px;
+  font-weight:500;
+  animation:preLogo 1s ease both;
+}
+
+.load-line{
+  width:220px;
+  height:2px;
+  background:#c6a15b;
+  margin:25px auto 0;
+  animation:loadLine 1.4s ease both;
+  transform-origin:left;
+}
+
+@keyframes preLogo{
+  from{opacity:0;transform:translateY(25px);filter:blur(8px);}
+  to{opacity:1;transform:translateY(0);filter:blur(0);}
+}
+
+@keyframes loadLine{
+  from{transform:scaleX(0);}
+  to{transform:scaleX(1);}
+}
