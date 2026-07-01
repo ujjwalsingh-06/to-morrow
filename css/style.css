@@ -194,55 +194,60 @@ button{
 }
 
 .hero{
+
     position:relative;
+
     min-height:100vh;
-    display:flex;
-    align-items:center;
+
     overflow:hidden;
 
-    background:
-    linear-gradient(
-        90deg,
-        rgba(10,10,10,.78) 0%,
-        rgba(10,10,10,.45) 35%,
-        rgba(10,10,10,.08) 100%
-    ),
-    url("../assets/images/hero.jpg");
+    display:flex;
 
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
-}
-
-.hero::before{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-
-linear-gradient(
-90deg,
-rgba(0,0,0,.68),
-rgba(0,0,0,.35),
-transparent
-);
-
-z-index:1;
+    align-items:center;
 
 }
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to bottom,rgba(0,0,0,.15),rgba(0,0,0,.55));
-}
-.hero-content{
+
+.hero-image{
+
+    position:absolute;
+
+    inset:0;
+
     width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:1;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.72),
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.10)
+    );
+
+    z-index:2;
+
+}
+
+.hero-content{
+
     position:relative;
-    z-index:5;
+
+    z-index:3;
+
+    width:100%;
+
 }
 
 .hero-text{
