@@ -194,56 +194,86 @@ button{
 }
 
 .hero{
-  min-height:100vh;
-  position:relative;
-  display:flex;
-  align-items:center;
-  color:var(--white);
-  background:
-    linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.35),rgba(0,0,0,.12)),
-    url("../assets/images/hero.jpg") center/cover no-repeat;
-  overflow:hidden;
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(10,10,10,.78) 0%,
+        rgba(10,10,10,.45) 35%,
+        rgba(10,10,10,.08) 100%
+    ),
+    url("../assets/images/hero.jpg");
+
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
 }
 
 .hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 18% 25%,rgba(198,161,91,.28),transparent 34%),
-    radial-gradient(circle at 85% 75%,rgba(255,255,255,.12),transparent 30%);
-}
 
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+90deg,
+rgba(0,0,0,.68),
+rgba(0,0,0,.35),
+transparent
+);
+
+z-index:1;
+
+}
 .hero-overlay{
   position:absolute;
   inset:0;
   background:linear-gradient(to bottom,rgba(0,0,0,.15),rgba(0,0,0,.55));
 }
-
 .hero-content{
-  position:relative;
-  z-index:2;
-  padding-top:120px;
+    width:100%;
+    position:relative;
+    z-index:5;
 }
 
 .hero-text{
-  max-width:780px;
+    max-width:560px;
 }
-
 .hero-text h1{
-  font-family:var(--heading);
-  font-size:clamp(54px,8vw,108px);
-  line-height:.94;
-  font-weight:500;
-  letter-spacing:-2px;
-  margin-bottom:28px;
-}
 
+    font-family:var(--heading);
+
+    font-size:clamp(65px,8vw,110px);
+
+    line-height:.95;
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+    font-weight:500;
+}
 .hero-desc{
-  max-width:620px;
-  font-size:18px;
-  color:rgba(255,255,255,.84);
-  margin-bottom:36px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.85);
+
+    max-width:520px;
+
+    margin-bottom:35px;
+
 }
 
 .hero-buttons{
