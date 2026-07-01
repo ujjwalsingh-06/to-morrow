@@ -43,3 +43,12 @@ window.addEventListener("load", revealOnScroll);
 document.querySelectorAll("img").forEach((img) => {
   img.setAttribute("loading", "lazy");
 });
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+
+  if (preloader) {
+    setTimeout(() => {
+      preloader.classList.add("hide");
+    }, 1600);
+  }
+});
