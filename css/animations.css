@@ -206,3 +206,80 @@
     transform: translateY(0);
   }
 }
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #090909;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-content {
+  text-align: center;
+  color: #fff;
+}
+
+.preloader-small {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.preloader-logo {
+  font-family: var(--heading);
+  font-size: clamp(56px, 9vw, 110px);
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1;
+  animation: logoReveal 1.2s ease both;
+}
+
+.preloader-line {
+  width: 220px;
+  height: 1px;
+  background: rgba(255,255,255,.18);
+  margin: 28px auto 0;
+  overflow: hidden;
+}
+
+.preloader-line span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--gold);
+  animation: lineLoad 1.4s ease forwards;
+}
+
+@keyframes logoReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes lineLoad {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
