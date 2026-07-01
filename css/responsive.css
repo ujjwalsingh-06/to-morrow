@@ -1,0 +1,177 @@
+@media (max-width: 1100px) {
+  .navbar {
+    gap: 18px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 76px;
+    right: -100%;
+    width: min(86%, 360px);
+    height: calc(100vh - 76px);
+    background: rgba(15, 15, 15, 0.98);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 34px;
+    gap: 22px;
+    transition: 0.35s ease;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    font-size: 17px;
+  }
+
+  .call-btn {
+    display: none;
+  }
+
+  .hero-text h1 {
+    font-size: 62px;
+  }
+
+  .about-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image img {
+    height: 480px;
+  }
+
+  .review-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    width: min(100% - 26px, 1180px);
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .site-header {
+    padding: 16px 0;
+  }
+
+  .logo {
+    font-size: 26px;
+    min-width: auto;
+  }
+
+  .logo span {
+    font-size: 8px;
+  }
+
+  .hero {
+    min-height: 92vh;
+  }
+
+  .hero-content {
+    padding-top: 100px;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+    letter-spacing: -1px;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .secondary-dark-btn {
+    width: 100%;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .category-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card img,
+  .product-card img {
+    height: 340px;
+  }
+
+  .section-heading h2,
+  .about-content h2 {
+    font-size: 38px;
+  }
+
+  .about-image img {
+    height: 380px;
+  }
+
+  .review-card p {
+    font-size: 23px;
+  }
+
+  .visit-box {
+    padding: 34px 24px;
+    border-radius: 24px;
+  }
+
+  .visit-box h2 {
+    font-size: 36px;
+  }
+
+  .visit-actions {
+    width: 100%;
+  }
+
+  .floating-whatsapp {
+    right: 14px;
+    bottom: 14px;
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .category-card img,
+  .product-card img {
+    height: 300px;
+  }
+}
