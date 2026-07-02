@@ -27,6 +27,42 @@ html{
 }
 
 body{
+  .hero .hero-image{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  z-index:1 !important;
+}
+
+.hero .hero-overlay{
+  position:absolute !important;
+  inset:0 !important;
+  background:linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.35), rgba(0,0,0,.1)) !important;
+  z-index:2 !important;
+}
+
+.hero .hero-content{
+  position:relative !important;
+  z-index:10 !important;
+}
+
+.hero .hero-text{
+  position:relative !important;
+  z-index:11 !important;
+  max-width:650px !important;
+  color:#fff !important;
+}
+
+.hero .hero-text h1,
+.hero .hero-desc,
+.hero .hero-tag{
+  color:#fff !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  display:block !important;
+}
   font-family:var(--body);
   background:var(--cream);
   color:var(--text);
